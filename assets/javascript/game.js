@@ -54,13 +54,11 @@ function verifyChikaChikaBoomBoom(letter) {
         for (var k = 0; k < totalGuessLength; k++) {
             if (wordsRandom[k] == letter) {
                 guessArray[k] = letter;
-                guessedAlpha.push(letter.toUpperCase());
             }
         }
-    } else {
-        guessedAlpha.push(letter.toUpperCase());
-        totalGuesses--;
     }
+
+    guessedAlpha.push(letter.toUpperCase());
 }
 
 function runRightRoundBaby() {
