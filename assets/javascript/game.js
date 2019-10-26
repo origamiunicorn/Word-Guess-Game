@@ -3,16 +3,15 @@ var guessTracking = document.getElementById("guessesLeftDiv");
 var keyLog = document.getElementById("guessedLettersDiv");
 var winTracking = document.getElementById("winsDiv");
 
-var wordsToGuess = ["salchow", "toeloop", "axeljump", "biellmann", "camelspin"]
+var wordsToGuess = ["toeloop", "flip", "lutz", "salchow", "loop", "axel", "euler", "bunnyhop", "waltz", "ballet", "mazurka", "fallingleaf", "split", "stag", "walley"]
 
 var wordsRandom = "";
 var wordsRandomStr = [];
 var totalGuessLength = 0;
-var setArray = new Set();
 var guessArray = [];
-var alphaList = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+var alphaList = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"; // Ask about regex ^[a-zA-Z]*$
 var guessedAlpha = [];
-
+var setArray = new Set();
 var winWin = 0;
 var loseLose = 0;
 var totalGuesses;
@@ -35,6 +34,7 @@ function helloDarkness() {
 }
 
 function verifyChikaChikaBoomBoom(letter) {
+
     if (alphaList.indexOf(letter) === -1) return;
     if (setArray.has(letter) === true) {
         return;
@@ -64,16 +64,18 @@ function verifyChikaChikaBoomBoom(letter) {
 }
 
 function runRightRoundBaby() {
-    currentWord.innerHTML = guessArray.join(" ");
+    currentWord.innerHTML = guessArray.join(" ").toUpperCase();
     guessTracking.innerHTML = "Total remaining guesses: " + totalGuesses;
     keyLog.innerHTML = guessedAlpha.join(" ");
 
     if (wordsRandomStr.toString() === guessArray.toString()) {
         winWin++;
         winTracking.innerHTML = winWin;
+        setArray.clear();
         helloDarkness();
     } else if (totalGuesses === 0) {
         loseLose++;
+        setArray.clear();
         helloDarkness();
     }
 }
