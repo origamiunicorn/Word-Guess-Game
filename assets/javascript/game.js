@@ -5,6 +5,7 @@ var keyLog = document.getElementById("guessedLettersDiv");
 var alphaList = /^[a-zA-Z]*$/; // Return to later, not satisfied.
 var wordsToGuess = ["salchow", "toe loop", "axel jump", "biellmann position", "camel spin", "choctaw", "combination spin", "crossover", "death spiral", "edge jump", "flip jump", "flying spin", "hydrant lift", "layback spin", "jump sequence", "loop jump", "lutz jump", "overhead lifts", "rocker", "scratch spin", "twizzles", "sit spin", "spiral", "swizzle", "throw jump", "upright spin"]
 var wordsRandom = wordsToGuess[Math.floor(Math.random() * wordsToGuess.length)];
+var numberGuesses = Math.round(wordsRandom.length * 1.5);
 var guessArray = [];
 var unknownLetters = wordsRandom.length;
 var wins = 0;
@@ -13,7 +14,9 @@ var wins = 0;
 for (var i = 0; i < wordsRandom.length; i++) {
     guessArray[i] = "_";
     currentWord.innerHTML = guessArray.join(" ");
+    currentWord.innerText += "\n" + wordsRandom;
 }
+
 
 // Keyup or keydown, but not keypress. 
 document.addEventListener("keyup", event => {
