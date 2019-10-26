@@ -56,8 +56,9 @@ function verifyChikaChikaBoomBoom(letter) {
                 guessArray[k] = letter;
             }
         }
+    } else {
+        totalGuesses--;
     }
-
     guessedAlpha.push(letter.toUpperCase());
 }
 
