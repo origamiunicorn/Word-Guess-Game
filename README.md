@@ -21,3 +21,4 @@ This is all part of a homework assignment for UCLA's Fullstack Web Development C
 * Write fully responsive coding for different break-points.
 * Consider adding sound effects for wins and losses.
 * Consider adding image effects for wins and losses, or for word hints.
+* As seen on MacAir (with Swedish keyboard not on, but installed) it may be better to find an alternative for the underline used for empty letters on page.
