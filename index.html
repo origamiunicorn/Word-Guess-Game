@@ -7,19 +7,29 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Figure Skating Word Guessing Game</title>
 
-    <link rel="stylesheet" src="./assets/css/reset.css">
-    <link rel="stylesheet" src="./assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Amatic+SC|Liu+Jian+Mao+Cao&display=swap');
+    </style>
+
 </head>
 
 <body>
 
     <div class="container">
-        <h1>Figure Skating Word Guess Game</h1>
-        <div class="instructionsDiv"></div>
-        <div class="winsDiv"></div>
-        <div class="currentWordDiv"></div>
-        <div class="guessesLeftDiv"></div>
-        <div class="guessedLettersDiv"></div>
+        <h1>Figure Skating Jumps Word Guess Game</h1>
+        <div class="gameBox">
+            <div id="instructionsDiv">Press any key to begin!</div>
+            <h3>Wins</h3>
+            <div id="winsDiv"></div>
+            <h3>Current Word</h3>
+            <div id="currentWordDiv"></div>
+            <div id="guessesLeftDiv"></div>
+            <h3>Letters Already Guessed</h3>
+            <div id="guessedLettersDiv"></div>
+        </div>
     </div>
 
     <script src="./assets/javascript/game.js"></script>
