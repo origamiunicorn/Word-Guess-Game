@@ -87,9 +87,9 @@ document.addEventListener("keyup", event => {
     // if (alphaList.indexOf(event === -1) {
     //     return;
     // }
-    if (setArray.has(event) === true) {
-        return;
-    }
+    // if (setArray.has(event) === true) {
+    //     return;
+    // }
 
     verifyChikaChikaBoomBoom(strLower);
     runRightRoundBaby();
